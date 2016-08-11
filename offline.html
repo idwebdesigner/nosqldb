@@ -32,7 +32,7 @@
                             </div>
 
             <article>
-              <p style="font-size:0.7em;margin-left:5px;"><span id="status"><span id="status">checking...</span></p>
+              <p style="font-size:0.7em;margin-left:5px;"><span id="status"><span id="status"></span></p>
               <ol id="state"></ol>
             </article>
             <script>
@@ -41,7 +41,7 @@
 
             function online(event) {
               statusElem.className = navigator.onLine ? 'online' : 'offline';
-              statusElem.innerHTML = navigator.onLine ? '<br/><a href="2.html"><i class="zmdi zmdi-refresh-sync"></i> Click here to Refresh</a>' : '<br/>You&#39;re offline, check network connection.<br/>content required internet access.';
+              statusElem.innerHTML = navigator.onLine ? '<br/><a href="1.html"><i class="zmdi zmdi-refresh-sync"></i> Click here to Refresh</a>' : '<br/>You&#39;re offline, check network connection.<br/>content required internet access.';
               state.innerHTML += '';
             }
 
