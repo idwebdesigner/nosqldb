@@ -215,12 +215,12 @@
                         <ul class="actions">
                             <li>
 
-                                <a href="http://neo4j.com/">
+                                <a id="sa-basic">
                                     <i class="zmdi zmdi-globe"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/neo4j/neo4j">
+                                <a id="sa-github">
                                     <i class="zmdi zmdi-github"></i>
                                 </a>
                             </li>
@@ -237,7 +237,7 @@
                                         <a href="update.html">Check Update</a>
                                     </li>
                                     <li>
-                                        <a href="https://github.com/neo4j/neo4j/archive/3.1.zip">Download</a>
+                                        <a id="sa-download">Download</a>
                                     </li>
                                 </ul>
                             </li>
@@ -342,14 +342,57 @@
         <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
         <script src="vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
 
-        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
-        <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
-        <script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
-        <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-        <script src="vendors/bower_components/autosize/dist/autosize.min.js"></script>
-        <script src="vendors/bower_components/mediaelement/build/mediaelement-and-player.js"></script>
-
         <script src="js/app.min.js"></script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Website Neo4j",
+                    text: "We will redirect to Website Neo4j. By clicking 'OK' you will be redirected.",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'http://neo4j.com/';
+                });
+            });
+
+            $('#sa-github').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "GitHub Neo4j",
+                    text: "We will redirect to Github Neo4j. By clicking 'OK' you will be redirected.",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'https://github.com/neo4j/neo4j';
+                });
+            });
+
+            $('#sa-download').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Download as ZIP file?",
+                    text: "Are you sure to download a branch as zip file?, by clicking 'OK' will be procees.",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'https://github.com/neo4j/neo4j/archive/3.1.zip';
+                });
+            });
+
+        </script>
+
     </body>
 
 </html>
